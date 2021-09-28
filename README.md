@@ -37,8 +37,6 @@ start_requests方法为scrapy的方法，我们对它进行重写。
                 "评论数量": quote.css('div.info div.bd div.star span::text')[1].re(r'\d+'),
                 "引言": quote.css('div.info div.bd p.quote span.inq::text').extract(),
             }
-            
-跳转下一页：
         next_url = response.css('div.paginator span.next a::attr(href)').extract()
         if next_url:
             next_url = "https://movie.douban.com/top250" + next_url[0]
