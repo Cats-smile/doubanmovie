@@ -46,7 +46,6 @@ start_requests方法为scrapy的方法，我们对它进行重写。
 # pipelines.py
 将其存入mongodb数据库中，不用提前创建表。
 
-class DoubanMoviePipeline(object):
     def __init__(self):
         self.client = pymongo.MongoClient('localhost', 27017)
         scrapy_db = self.client['doubanmovie']  # 创建数据库
