@@ -1,4 +1,4 @@
-# doubanmovie
+# 豆瓣电影
  A crawler of doubamovie 
  
  一个小小的入门级scrapy框架的应用，选取豆瓣电影对排行榜前1000的电影数据进行爬取。
@@ -39,11 +39,9 @@ start_requests方法为scrapy的方法，我们对它进行重写。
             }
             
 跳转下一页：
-    next_url = response.css('div.paginator span.next a::attr(href)').extract()
-          if next_url:
-              next_url = "https://movie.douban.com/top250" + next_url[0]
-              print(next_url)
-              yield scrapy.Request(next_url, headers=self.headler)
-
-
+        next_url = response.css('div.paginator span.next a::attr(href)').extract()
+        if next_url:
+            next_url = "https://movie.douban.com/top250" + next_url[0]
+            print(next_url)
+            yield scrapy.Request(next_url, headers=self.headler)
 
