@@ -59,6 +59,7 @@ start_requests方法为scrapy的方法，我们对它进行重写。
         self.client.close()
 
 # item.py
+数据封装
 
     url = scrapy.Field()
     name = scrapy.Field()
@@ -68,4 +69,4 @@ start_requests方法为scrapy的方法，我们对它进行重写。
     year = scrapy.Field()
     country = scrapy.Field()
     score = scrapy.Field()
-    vary = scrapy.Field()pass
+    vary = scrapy.Field()
