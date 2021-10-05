@@ -58,3 +58,22 @@ start_requests方法为scrapy的方法，我们对它进行重写。
     def close_spider(self, spider):
         self.client.close()
 
+# item.py
+
+import scrapy
+
+定义数据封装item
+class DoubanmovieItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    url = scrapy.Field()
+    name = scrapy.Field()
+    order = scrapy.Field()
+    content = scrapy.Field()
+    contentnum = scrapy.Field()
+    year = scrapy.Field()
+    country = scrapy.Field()
+    score = scrapy.Field()
+    vary = scrapy.Field()
+
+    pass
