@@ -61,7 +61,7 @@ start_requests方法为scrapy的方法，我们对它进行重写。
 # item.py
 
 import scrapy
-class DoubanmovieItem(scrapy.Item):
+    class DoubanmovieItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     url = scrapy.Field()
@@ -72,6 +72,4 @@ class DoubanmovieItem(scrapy.Item):
     year = scrapy.Field()
     country = scrapy.Field()
     score = scrapy.Field()
-    vary = scrapy.Field()
-
-    pass
+    vary = scrapy.Field()pass
