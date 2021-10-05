@@ -60,10 +60,6 @@ start_requests方法为scrapy的方法，我们对它进行重写。
 
 # item.py
 
-import scrapy
-    class DoubanmovieItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     url = scrapy.Field()
     name = scrapy.Field()
     order = scrapy.Field()
